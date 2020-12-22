@@ -25,6 +25,18 @@ Vou mudar a cor do background do produtos li, e colocar a margem 0 para os lados
 Nossa descr ta mt colada na borda, no fim do elemento
 **box-sizing: border-box >> os 30% são definitivos, e o padding tao dentro dos 30%
 do um espaçamento externo pra cima de 10px no prodto-preço
+
+Vamos começar a criacao da BORDA, no produtos li, 3 apect: tamaho, tipo e cor ....
+inves de declarar as 3 opcoes em 3 linhas, declaramos tudo em uma... 'border: 2px solid black'
+A borda fica entre o padding e a margin!!
+
+Agora vamos arredondar a borda! Usamos o BORDER-RADIUS no produtos li
+
+** hover: qd o mouse esta em cima do elemento, quero colocar o a antes, pq eh o comport que quero mapear "nav a:hover{...}"
+neste caso colocarei: qd passar o mouse na palavra ficará amarelo e sublinhado
+
+Agora faremos com os itens dos produtos o hover, '.produtos li:hover' qd passo o mouse em cima dos itens, ele muda
+
 */
 header {
     background: #BBBBBB;
@@ -59,6 +71,11 @@ nav a {
     text-decoration: none;
 }
 
+nav a:hover{
+    color: yellow;
+    text-decoration: underline;
+}
+
 .produtos {
     width:940px;
     margin: 0 auto;
@@ -71,12 +88,24 @@ nav a {
     text-align:center;
     width: 30%;
     vertical-align: top;
-    background: #CCCCCC;
+   
     margin: 0 1.5%;
     padding: 30px 20px;
     box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.produtos li:hover {
+    color: yellow;
+   
+}
+
+.produtos li:active {
+    border-color: green;
 
 }
+
 
 .produtos h2 {
     font-size: 30px;
