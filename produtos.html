@@ -1,0 +1,81 @@
+<!--Parte2 - Faremos um pag de produtos, cada pag tem um arq html
+    Para inicio, criaremos: doctype, tag html com head, meta, title e link para o arq css;
+    e o body vazio por enqto.
+    Dentro do cabeçalho (header): Iremos colocar o logo e os links para navegar nas pags
+      h1: mt importancia para o conteudo, será a imagem - logo
+      colocaremos tb uma lista nao ordenada, com ul e li ( será o menu, para navegar as pags)
+      a tag <a> com href irá gerar um link para uma determ pag, redirecionando. Por ex: Home
+DICA: crie html e garanta que esta funcion, depois crie as config, passo a passo, fizemos header, agr faremos o css..
+Vamos criar uma tag nav para a lista ul
+
+**ARQ "reset css" >> limpa tudo oq o navegador cria. Arq basico, padrao, mt usado. Utilizaremos um link na pag produtos html
+este arq reset.css limpa tudo oq eh feito automat pelo navegador, primeiro limpa depois colocamos nosso estilo! LImpa os espaç desnec que o naveg cria auto
+
+*Da para fazer os testes no html do site, usando F12 (inspecionar), dentro do element style, faz os testes em tempo real
+
+Vou colocar uma div=caixa, antes do h1 e do nav para centralizar o conteudo, p/ limitar o conteudo
+ela vai ficar no meio centralizando td conteudo
+
+Aprox o mouse no nr da linha, ele pode fechar o header, após finalizado
+Agora usaremos a tag main, conteudo principal, assim o naveg entende melhor nosso conteudo
+faremos a lista, usaremos h2 pq h1 já foi utilizado antes, fazendo td html com os tipos, descr e valores das opcoes.
+
+Vamos colocar uma classe na lista do main= produtos
+Criaremos uma classe na tag p para modificar o estilo dela >> produto-preco
+
+
+--> 
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Produtos - Barbearia</title>
+
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="produtos.css">
+
+    </head>
+    <body>
+        <header>
+            <div class='caixa'>
+                <h1><img src="logo.png"></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>    
+        </header>
+
+        <main>
+            <ul class="produtos">
+                <li>
+                    <h2>Cabelo</h2>
+                    <img src="cabelo.jpg">
+                    <p class='produto-descricao'>Na tesoura ou máquina, como o cliente preferir</p>
+                    <p class='produto-preco'>R$ 25,00</p>
+
+                  
+                </li> 
+                <li>
+                    <h2>Barba</h2>
+                    <img src="barba.jpg">
+                    <p class='produto-descricao'>Corte e desenho profissional de barba</p>
+                    <p class='produto-preco'>R$ 18,00</p>
+                
+                </li> 
+                <li>
+                    <h2>Cabelo + Barba</h2>
+                    <img src="cabelo+barba.jpg">
+                    <p class='produto-descricao'>Pacote completo cabelo e barba</p>
+                    <p class='produto-preco'>R$ 35,00</p>
+                
+                </li> 
+            </ul>
+
+        </main>
+
+    </body>
+</html>

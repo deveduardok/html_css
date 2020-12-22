@@ -1,0 +1,95 @@
+/* Deixaremos o cabeçalho cinza, header cinza.
+temos duas formas de exibir o conteudo, inline(a fig vai ter o msm tam da origianl) ou block( a fig sempre tera 100% da pag)
+ Usamos nav li para modificar o estilo dos itens da lista
+ Todos os links da nav: nav a tenham as letras maiusculas, com uppercase
+ Vamos mudar a cor pra preto, font-weight (peso) : negrito; tamanho da font(font-size) 
+Para tirar o sublinhado do text que vem padrao, text decoration: none
+coloco a margin para a esquerda no nav li ( espaçar as palavras do menu)
+**ARQ "reset css" >> limpa tudo oq o navegador cria. Arq basico, padrao, mt usado. Utilizaremos um link na pag home html
+este arq reset.css limpa tudo oq eh feito
+*Da para fazer os testes no html do site, usando F12 (inspecionar), dentro do element style, faz os testes em tempo real
+ position: absolute >> consigo posicionar meu elemento em qlqr lugar da pag; topo =0 e direita =0 >>ficam no canto direito pra cima.
+ No caso farei no meio do header, alinhado >> top: 110px
+ depois de criado a div=caixa no html, vou colocar uma largura fixa, usando position:relative o menu fica dentro da div(caixa)
+ usamos margin 0 auto >> fica automatica a margem pra dir e esq e 0 pra cima e pra baixo, independente do tam. da tela 
+ position relative >> quero que a caixa levante
+ coloquei uma margem(padding) no header, para centralizar td no meio, 20px pra cima e pra baixo
+Lista no main >> produtos li, vamos fazer o estilo, colocando ambos na msm linha
+ .produtos li >> alinhar os itens
+ width : 30% >> cada um dos elementos vai ocupar 30% da largura (distribui os itens)
+vou colocar um padding de 50px para cima e baixo e 0 para os lados
+para mexer no titulo h2 >> aumentando a fonte e deixando em negrito
+Agora, vamos dar um nome nas tags p ( preco e descricao)pq iremos colocar em negrito 
+
+Vou mudar a cor do background do produtos li, e colocar a margem 0 para os lados e 1.5% p/cima e baixo(espaçar os itens)
+Nossa descr ta mt colada na borda, no fim do elemento
+**box-sizing: border-box >> os 30% são definitivos, e o padding tao dentro dos 30%
+do um espaçamento externo pra cima de 10px no prodto-preço
+*/
+header {
+    background: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caixa{
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+
+}
+
+nav{
+    position:absolute;
+    top:110px;
+    right:0;
+
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+
+}
+
+nav a {
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size:22px;
+    text-decoration: none;
+}
+
+.produtos {
+    width:940px;
+    margin: 0 auto;
+    padding: 50px 0;
+
+}
+
+.produtos li {
+    display: inline-block;
+    text-align:center;
+    width: 30%;
+    vertical-align: top;
+    background: #CCCCCC;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+
+}
+
+.produtos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto-descricao{
+    font-size: 18px;
+}
+
+.produto-preco {
+    font-size:22px;
+    font-weight:bold;
+    margin-top: 10px;
+
+}

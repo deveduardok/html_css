@@ -1,0 +1,80 @@
+<!-- PARTE 1
+h1 eh titulo, p paragrafo, stronf eh negrito, em eh italico
+UMA TAG DENTRO DA OUTRA,
+a tag doctype é a primeira, na 1 linha, por padrao, colocando a versao do html, obrigatoria.
+a tag html marca tudo que sera renderizado, tag do conteudo, obrigatoria.
+Sempre bom usar identação para facil leitura
+tag meta, passa info pro navegador, e coloca a propriedade, resolve probl de acento e ç, charset ver o site com dicio correto
+tag title serve para colocar o nome da aba
+HTML eh dividido em duas partes: HEAD(cabeça, infos passando p/ o naveg) e BODY(info a ser exib na pag)
+
+CSS: folha de estilo cascata,
+vamos add uma propr style e aumentar a font do paragr para 20px,
+para alinhar um elemento ao centro, use a propr text align no titulo h1, : para atribuir um valor a propr
+depois faço tudo em todos os paragrafos, *se já tiver um style, coloque um ";" para separar
+**AGORA VAMOS AUTOMATIZAR AS TAGS PARA TEREM A MSM PROPR, INVES DE COLOCAR STYLE EM TDAS, coloco dentro de head e idebtifico como 'p' (p/tds os paragraf),
+*** Podemos usar o CSS dentro do html com a tag style no head OUU criar um arq style.css com os estilos e referenciar com um link(assim, podemos usar em varias pags diferentes)
+
+# Colocando img(banner) no site, o arq esta dentro da pasta, dentro do body, coloco a tag img
+para criarmos um css para essa img, colocamos um id, para deixar do tamanho e centralizar 
+
+h2 começa um novo conteudo, faremos tag de lista <ul> e <li> para cada item
+usaremos uma classe: itens para marcar todos e usar o css
+
+Vamos criar uma tag de divisao <div>, elas n mudam visualmente, mas ajuda o css e marcam diferentes capitulos,
+colocaremos nomes nas classes das div para identificarmos elas
+Vamos colocar outro imagem, com nome de beneficios
+
+Faremos uma div para o cabeçãlho, ela se chama header
+coloco  uma classe titulo centralizado em todos os hs e jogo no css que quero cnetralizar
+===============================================================
+PARTE 2 - vamos fazer a pag de produtos, cada pag tem um html
+
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Barbearia</title>
+        
+        <link rel="stylesheet" href="style.css">
+
+  
+    </head>
+    
+    <body>
+        <header>
+            <h1 class="titulo-principal">Barbearia </h1>
+        
+        </header>
+        <img id='banner' src='banner.jpg'>
+
+        <div class='principal'>
+            <h2 class="titulo-centralizado" >Sobre a Barbearia</h2>
+
+            <p >Localizada no coração da cidade a <strong>Barbearia</strong> traz para o mercado o que há de melhor para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é destaque na cidade e conquista novos clientes a cada dia. </p>
+
+            <p id="missao"><em>Nossa missão é: <strong>"Proporcionar auto-estima e qualidade de vida aos clientes".</strong></em> </p>
+
+            <p >Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes. </p>
+        </div>
+
+        <div class='beneficios'>
+            <h3 class="titulo-centralizado"> Benefícios </h3>
+
+            <ul>
+                <li class="itens">Atendimento aos clientes</li>
+                <li class="itens">Espaço diferenciado </li>
+                <li class="itens">Localização</li>
+                <li class="itens">Profissionais qualificados</li>
+            </ul>
+
+            <img src="beneficios.jpg" class="imagembeneficios">
+        </div>    
+    </body>
+
+</html>

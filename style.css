@@ -1,0 +1,79 @@
+/* CSS: Como é uma folha de estilos em cascata, 
+a cascata vai descendo,
+ e o que eu faço no elemento pai reflete para o elemento filho.
+
+## se criamos um arq css, o idela é mover todo o css para cá
+
+"p" para generalizar o estilo de todos os paragraf
+Para mudar a cor de todo o site, coloque na tag body
+Dar uma nova definicao para tag strong, ela será negrito e cor vermelha
+** se quisermos mudar apenas um paragr, usamos um ID qlqr no html e o # para refer no css
+##PODEMOS fazer testes no css, no inspecionar e mudar la na hora, ex: 'color:yellow' do h1
+coloquei css na imagem, a largura será 100%, ocupando td tela independ do dispositivo.
+
+Usamos o .itens para refernciar a classe itens
+h2 vamos centralizar
+ul nossa lista precisa de uma marcacao, inline e block>> ocupa so o seu conteudo e n mexe com a largura
+na imagem colocaremos 50%
+padding: espaçamento
+
+*/
+
+body{ 
+    background-color: white;
+}
+
+#banner{
+    width: 100%;
+}
+
+.principal{
+    background-color: gray;
+    padding: 30px;
+
+}
+
+.titulo-principal{
+    padding-left:20px;
+
+}
+
+
+.titulo-centralizado{
+    text-align: center;
+
+}
+
+p {
+    text-align: center ;
+}
+
+#missao  {
+    font-size:20px;
+
+}
+
+em strong {
+    color:red;
+}
+
+.itens{
+    font-style: italic;
+}
+
+.beneficios{
+    background-color: white;
+    padding: 20px;
+}
+
+
+ul{
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+.imagembeneficios{
+    width: 50%;
+
+}
