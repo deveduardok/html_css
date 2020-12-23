@@ -32,11 +32,21 @@ A borda fica entre o padding e a margin!!
 
 Agora vamos arredondar a borda! Usamos o BORDER-RADIUS no produtos li
 
-** hover: qd o mouse esta em cima do elemento, quero colocar o a antes, pq eh o comport que quero mapear "nav a:hover{...}"
+## PSEUDO CLASSES>> hover e active
+** HOVER: qd o mouse esta em cima do elemento terá o comportamento x, pq eh o comport que quero mapear "nav a:hover{...}"
 neste caso colocarei: qd passar o mouse na palavra ficará amarelo e sublinhado
 
-Agora faremos com os itens dos produtos o hover, '.produtos li:hover' qd passo o mouse em cima dos itens, ele muda
+Agora faremos com os itens dos produtos o hover, '.produtos li:hover' qd passo o mouse em cima dos itens, ele muda cor
+".produtos li:active" ele muda de cor qd clicar [**active: qd o elemento esta sendo ativado pelo user]
+eu quero que o h2 qd o mouse estiver em cima do li produtos:  ".produtos li:hover h2">> aumente a fonte do titulo qd passa mouse
 
+## Aula 07 (ultima)
+rodapé = footer, vamos centralizar e mudar a cor de fundo
+"background: gray;" para mudarmos a cor de fundo do footer para cinza,
+** "background: url("bg.jpg");">> neste caso colocaremos uma img como cor de fundo, o css vai copiando a img infinitas vzs ate ocupar tudo
+mudamos o padding: 40px para cima e para baixo e 0 esq e dir
+'footer p' para mudarmos o paragr do rodape ou add um marcador(classe=copyright) no html e '.copyright' no css
+mudamos o tamanho, e a margem superior
 */
 header {
     background: #BBBBBB;
@@ -72,7 +82,7 @@ nav a {
 }
 
 nav a:hover{
-    color: yellow;
+    color: #C78C19;
     text-decoration: underline;
 }
 
@@ -97,7 +107,7 @@ nav a:hover{
 }
 
 .produtos li:hover {
-    color: yellow;
+    border-color: #C78C19;
    
 }
 
@@ -106,6 +116,9 @@ nav a:hover{
 
 }
 
+.produtos li:hover h2 {
+    font-size: 34px;
+}
 
 .produtos h2 {
     font-size: 30px;
@@ -120,5 +133,17 @@ nav a:hover{
     font-size:22px;
     font-weight:bold;
     margin-top: 10px;
+}
 
+footer{
+    text-align: center;
+    background: url("bg.jpg");
+    padding: 40px 0;
+
+}
+
+.copyright {
+    color: white;
+    font-size: 13px;
+    margin: 20px 0 0 ;
 }
