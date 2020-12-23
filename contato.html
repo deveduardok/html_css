@@ -1,0 +1,76 @@
+<!-- PARTE 03  Aba contato e Formulários
+ Copie todo produtos.html e retire apenas o main
+**dentro do main, colocaremos uma tag de formulario <form>
+depois utilizaremos a tag de entrada de dados, input, td input tem um tipo, no caso text, td input tem q ter um identif[id]
+usamos uma tag label, etiqueta para o input, e nele usamos um for para referenc um input
+**sempre bom deixar o par input e label alinhados com msm id
+**Sempre terá um input do tipo submit, ou seja, ENVIO
+
+textarea: tag para colocar msg e o proprio user ajustar o tamanho
+input do tipo radio, sera com alternativas
+
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Produtos - Barbearia</title>
+
+        <link rel="stylesheet" href="reset.css"> 
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <header>
+            <div class='caixa'>
+                <h1><img src="logo.png"></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>    
+        </header>
+
+        <main>
+           <form>
+                <label for ='nomesobrenome'>Nome e sobrenome</label>
+                <input type='text' id='nomesobrenome'>
+
+                <label for ='email'>Email</label>
+                <input type='text' id='email'>
+
+                <label for ='telefone'>Telefone</label>
+                <input type='text' id='telefone'>
+
+                <label for ='mensagem'>Mensagem</label>
+                <textarea cols='70' rows='10' id='mensagem'>  </textarea>
+
+                <label for ='radio-email'>Email</label>
+                <input type='radio' id='radio-email'>
+
+                <label for ='radio-telefone'>Telefone</label>
+                <input type='radio' id='radio-telefone'>
+
+                <label for ='radio-email'>Email</label>
+                <input type='radio' id='radio-email'>
+
+                <input type='submit' value='Enviar Formulário'>
+
+           </form>
+
+        </main>
+
+        <footer>
+            <img src="logo-branco.png">
+            <p class="copyright">&copy; Copyright Barbearia - 2020</p>
+
+
+        </footer>
+
+    </body>
+</html>

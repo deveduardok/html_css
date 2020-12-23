@@ -1,79 +1,171 @@
-/* CSS: Como é uma folha de estilos em cascata, 
-a cascata vai descendo,
- e o que eu faço no elemento pai reflete para o elemento filho.
+/* Deixaremos o cabeçalho cinza, header cinza.
+temos duas formas de exibir o conteudo, inline(a fig vai ter o msm tam da origianl) ou block( a fig sempre tera 100% da pag)
+ Usamos nav li para modificar o estilo dos itens da lista
+ Todos os links da nav: nav a tenham as letras maiusculas, com uppercase
+ Vamos mudar a cor pra preto, font-weight (peso) : negrito; tamanho da font(font-size) 
+Para tirar o sublinhado do text que vem padrao, text decoration: none
+coloco a margin para a esquerda no nav li ( espaçar as palavras do menu)
+**ARQ "reset css" >> limpa tudo oq o navegador cria. Arq basico, padrao, mt usado. Utilizaremos um link na pag home html
+este arq reset.css limpa tudo oq eh feito
+*Da para fazer os testes no html do site, usando F12 (inspecionar), dentro do element style, faz os testes em tempo real
+ position: absolute >> consigo posicionar meu elemento em qlqr lugar da pag; topo =0 e direita =0 >>ficam no canto direito pra cima.
+ No caso farei no meio do header, alinhado >> top: 110px
+ depois de criado a div=caixa no html, vou colocar uma largura fixa, usando position:relative o menu fica dentro da div(caixa)
+ usamos margin 0 auto >> fica automatica a margem pra dir e esq e 0 pra cima e pra baixo, independente do tam. da tela 
+ position relative >> quero que a caixa levante
+ coloquei uma margem(padding) no header, para centralizar td no meio, 20px pra cima e pra baixo
+Lista no main >> produtos li, vamos fazer o estilo, colocando ambos na msm linha
+ .produtos li >> alinhar os itens
+ width : 30% >> cada um dos elementos vai ocupar 30% da largura (distribui os itens)
+vou colocar um padding de 50px para cima e baixo e 0 para os lados
+para mexer no titulo h2 >> aumentando a fonte e deixando em negrito
+Agora, vamos dar um nome nas tags p ( preco e descricao)pq iremos colocar em negrito 
 
-## se criamos um arq css, o idela é mover todo o css para cá
+Vou mudar a cor do background do produtos li, e colocar a margem 0 para os lados e 1.5% p/cima e baixo(espaçar os itens)
+Nossa descr ta mt colada na borda, no fim do elemento
+**box-sizing: border-box >> os 30% são definitivos, e o padding tao dentro dos 30%
+do um espaçamento externo pra cima de 10px no prodto-preço
 
-"p" para generalizar o estilo de todos os paragraf
-Para mudar a cor de todo o site, coloque na tag body
-Dar uma nova definicao para tag strong, ela será negrito e cor vermelha
-** se quisermos mudar apenas um paragr, usamos um ID qlqr no html e o # para refer no css
-##PODEMOS fazer testes no css, no inspecionar e mudar la na hora, ex: 'color:yellow' do h1
-coloquei css na imagem, a largura será 100%, ocupando td tela independ do dispositivo.
+Vamos começar a criacao da BORDA, no produtos li, 3 apect: tamaho, tipo e cor ....
+inves de declarar as 3 opcoes em 3 linhas, declaramos tudo em uma... 'border: 2px solid black'
+A borda fica entre o padding e a margin!!
 
-Usamos o .itens para refernciar a classe itens
-h2 vamos centralizar
-ul nossa lista precisa de uma marcacao, inline e block>> ocupa so o seu conteudo e n mexe com a largura
-na imagem colocaremos 50%
-padding: espaçamento
+Agora vamos arredondar a borda! Usamos o BORDER-RADIUS no produtos li
+
+## PSEUDO CLASSES>> hover e active
+** HOVER: qd o mouse esta em cima do elemento terá o comportamento x, pq eh o comport que quero mapear "nav a:hover{...}"
+neste caso colocarei: qd passar o mouse na palavra ficará amarelo e sublinhado
+
+Agora faremos com os itens dos produtos o hover, '.produtos li:hover' qd passo o mouse em cima dos itens, ele muda cor
+".produtos li:active" ele muda de cor qd clicar [**active: qd o elemento esta sendo ativado pelo user]
+eu quero que o h2 qd o mouse estiver em cima do li produtos:  ".produtos li:hover h2">> aumente a fonte do titulo qd passa mouse
+
+## Aula 07 (ultima da Parte 02)
+rodapé = footer, vamos centralizar e mudar a cor de fundo
+"background: gray;" para mudarmos a cor de fundo do footer para cinza,
+** "background: url("bg.jpg");">> neste caso colocaremos uma img como cor de fundo, o css vai copiando a img infinitas vzs ate ocupar tudo
+mudamos o padding: 40px para cima e para baixo e 0 esq e dir
+'footer p' para mudarmos o paragr do rodape ou add um marcador(classe=copyright) no html e '.copyright' no css
+mudamos o tamanho, e a margem superior
+
+########## Parte 03 ########
+usaremos o main e o form do contato.html para ajusta los na tela
+usaremos o form label e form input para que seja em blocos, horizontal para q nao seja inline>> block
+vou mudando os forms para aumentar espaçamento,... coloquei width de 50% que será o tamanho da caixa de input, sendo 50% da tela.
+
 
 */
-
-body{ 
-    background-color: white;
+header {
+    background: #BBBBBB;
+    padding: 20px 0;
 }
 
-#banner{
-    width: 100%;
+.caixa{
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
 }
 
-.principal{
-    background-color: gray;
-    padding: 30px;
-
+nav{
+    position:absolute;
+    top:110px;
+    right:0;
 }
 
-.titulo-principal{
-    padding-left:20px;
-
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
 }
 
-
-.titulo-centralizado{
-    text-align: center;
-
+nav a {
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size:22px;
+    text-decoration: none;
 }
 
-p {
-    text-align: center ;
+nav a:hover{
+    color: #C78C19;
+    text-decoration: underline;
 }
 
-#missao  {
-    font-size:20px;
-
+.produtos {
+    width:940px;
+    margin: 0 auto;
+    padding: 50px 0;
 }
 
-em strong {
-    color:red;
-}
-
-.itens{
-    font-style: italic;
-}
-
-.beneficios{
-    background-color: white;
-    padding: 20px;
-}
-
-
-ul{
+.produtos li {
     display: inline-block;
+    text-align:center;
+    width: 30%;
     vertical-align: top;
-    width: 20%;
-    margin-right: 15%;
+   
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 10px;
 }
-.imagembeneficios{
-    width: 50%;
 
+.produtos li:hover {
+    border-color: #C78C19;
+}
+
+.produtos li:active {
+    border-color: green;
+}
+
+.produtos li:hover h2 {
+    font-size: 34px;
+}
+
+.produtos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto-descricao{
+    font-size: 18px;
+}
+
+.produto-preco {
+    font-size:22px;
+    font-weight:bold;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    background: url("bg.jpg");
+    padding: 40px 0;
+}
+
+.copyright {
+    color: white;
+    font-size: 13px;
+    margin: 20px 0 0 ;
+}
+
+main{
+    width:940px;
+    margin: 0 auto;
+}
+
+form{
+    margin: 40px 0;
+}
+
+form label {
+    display:block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+form input {
+    display:block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
 }
