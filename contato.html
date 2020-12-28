@@ -6,9 +6,43 @@ usamos uma tag label, etiqueta para o input, e nele usamos um for para referenc 
 **sempre bom deixar o par input e label alinhados com msm id
 **Sempre terá um input do tipo submit, ou seja, ENVIO
 
-textarea: tag para colocar msg e o proprio user ajustar o tamanho
-input do tipo radio, sera com alternativas
+textarea: tag para colocar msg e o proprio user ajustar o tamanho (tag de conteudo, abre e fecha)
 
+input do tipo radio box, sera com alternativas a serem assinaladas
+Para que o radio box de opçoes para assinalar funcione apenas para uma alternat, nomeio ele. 
+no ex será 'contato' assim vao pertencer ao msm grupo e so uma alternat pode ser assinalada 
+Colocaremos uma tag p para colocar o titulo da pergunta do radio
+Farei uma div para toda essa parte de paragr e radio com alternat para sabermos q é td referente a uma entrada de dados
+
+Posso colocar um input dentro do label, inves de abrir label e input e atrela los, este sera do tipo checkbox.
+Vamos refazer as 3 opcoes de email, tel e whats e colocar o input dentro do label. Agora o input esta antes do label!
+***vou colocar a classe 'input-padrao' no nome, tel, email e textarea. Agora ficará tudo alinhado, os inputs, radio e checkbox
+#*criarei uma classe 'checkbox' no checkbox
+
+Vamos criar uma tag 'select', não sera um input, é para selecionar um opcao na caixa, dentro dela colocamos as 'options'
+Coloquei uma div no select
+
+### MOBILE INPUT TYPES: p/ ficar certinho na tela do cel e nos tipos de teclados do cel. Ex: tel, email,..
+ex:"<input type='email'>" 
+
+Se colocarmos 'required' no input, é igual a obrigatorio, vc so consegue enviar o formulario se estiver algo escrito
+'placeholder'= sugestao de exemplo, fica no input ate alguem modificar, comecar a escrever
+'checked'= opcao dentro do input radio e input do checkbox para ser marcado inicialmente
+
+Inves de utilizarmos tags de div, usaremos <fieldset>= se refere a um ou mais campos a um assunto especif
+Dentro do fieldset nao temos paragrafos <p>, temos titulos, que sao chamados de <legends>
+
+Dentro das tags de img, colocaremos 'alt', seria uma alternativa caso a img de erro ou nao apareca
+
+#*#* Vamos criar uma classe para o input submit, chamado 'enviar'
+
+Vamos criar uma tag de tabela=<table> para exibir o horario de funcionamento. Criaremos mts tags mas é facil de entender
+Uma tab eh uma seq de linhas e colunas. Serao 4 linhas e cada uma com 2 cedulas
+Linha= <tr> = table row, teremos 4 linhas
+cedulas= <td>
+Dentro da tab, criamos tags, <thead>=cabeçalho, <th>=cedula do cabeçalho
+              <tbody>= corpo da tab
+              Para mexermos no visual da tab, usaremos o css.
 
 -->
 
@@ -25,7 +59,7 @@ input do tipo radio, sera com alternativas
     <body>
         <header>
             <div class='caixa'>
-                <h1><img src="logo.png"></h1>
+                <h1><img src="logo.png" alt='logo da barbearia'></h1>
                 <nav>
                     <ul>
                         <li><a href="index.html">Home</a></li>
@@ -39,34 +73,75 @@ input do tipo radio, sera com alternativas
         <main>
            <form>
                 <label for ='nomesobrenome'>Nome e sobrenome</label>
-                <input type='text' id='nomesobrenome'>
+                <input type='text' id='nomesobrenome' class='input-padrao' required>
 
                 <label for ='email'>Email</label>
-                <input type='text' id='email'>
+                <input type='email' id='email' class='input-padrao' required placeholder='seuemail@dominio.com'>
 
                 <label for ='telefone'>Telefone</label>
-                <input type='text' id='telefone'>
+                <input type='tel' id='telefone' class='input-padrao' required placeholder='(XX) XXXX-XXXX'>
 
                 <label for ='mensagem'>Mensagem</label>
-                <textarea cols='70' rows='10' id='mensagem'>  </textarea>
+                <textarea cols='70' rows='10' id='mensagem' class='input-padrao' required>  </textarea>
 
-                <label for ='radio-email'>Email</label>
-                <input type='radio' id='radio-email'>
+                <fieldset>
+                    <legend>Como prefere o nosso contato?</legend>
+                    <label for ='radio-email'><input type='radio' name='contato' id='radio-email'>Email</label>
+                  
+                    <label for ='radio-telefone'> <input type='radio' name='contato' id='radio-telefone'>Telefone</label>
+                  
+                    <label for ='radio-whatsapp'><input type='radio' name='contato' id='radio-whatsapp' checked>WhatsApp</label>
+                   
+                 
+                </fieldset>    
 
-                <label for ='radio-telefone'>Telefone</label>
-                <input type='radio' id='radio-telefone'>
+                <fieldset>
+                    <legend>Qual horário prefere ser atendido?</legend>
+                    <select>
+                        <option>Manhã</option>
+                        <option>Tarde</option>
+                        <option>Noite</option>
+                    </select>
+                </fieldset>
 
-                <label for ='radio-email'>Email</label>
-                <input type='radio' id='radio-email'>
+                <label class='checkbox'><input type='checkbox' checked>Gostaria de receber nossas novidades por email?</label>
 
-                <input type='submit' value='Enviar Formulário'>
-
+                <input type='submit' value='Enviar Formulário' class='enviar'>
            </form>
+
+           <table>
+               <thead>
+                    <tr>
+                        <th>Dia</th>
+                        <th>Horário</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Segunda</td>
+                        <td>8h ~ 20h</td>
+                    </tr>
+
+                    <tr>
+                        <td>Quarta</td>
+                        <td>8h ~ 20h</td>
+                    </tr>
+
+                    <tr>
+                        <td>Sexta</td>
+                        <td>8h ~ 20h</td>
+                    </tr>
+                </tbody>    
+ 
+
+           </table>
 
         </main>
 
         <footer>
-            <img src="logo-branco.png">
+            <img src="logo-branco.png" alt='logo da barbearia'>
             <p class="copyright">&copy; Copyright Barbearia - 2020</p>
 
 

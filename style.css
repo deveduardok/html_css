@@ -50,9 +50,25 @@ mudamos o tamanho, e a margem superior
 
 ########## Parte 03 ########
 usaremos o main e o form do contato.html para ajusta los na tela
-usaremos o form label e form input para que seja em blocos, horizontal para q nao seja inline>> block
+usaremos o form label e form input para que seja em blocos>> vertical(embaixo do outro) , horizontal(td lado a lado) seria se fosse inline
+margin 10px vai ajudar a dar espaço entre a label e o campo que vem logo abaixo dela
 vou mudando os forms para aumentar espaçamento,... coloquei width de 50% que será o tamanho da caixa de input, sendo 50% da tela.
 
+*Aqui no css, vamos colocar o (textarea) com as msms configs do (input), faremos isso com [virgula]
+***Vou criar uma classe 'input-padrao' assim nao preciso ficar colocando tdas as tags q usam a config, será
+só referenciar no html onde for utiliza lo
+#*vou criar a classe checkbox p/ aumentar a margem pra cima e abaixo de 20px
+
+QD TEMOS QUE REPLICAR AS CONFIGS DO CSS PARA VARIOS ITENS, usamos a virgula ou criamos uma classe
+HIERARQUIA NO CSS: id > class > tag. Ex: #banner >.teste> form p > p .Id tem peso maior!! Nunca é subescrito! 
+Se tivermos mudanca de cores no id e na tag para msm elemento, prevalece o ID.
+DICA: criar CLASSES para os elementos, ñ é tao generico como a tag e nem tão especif como o Id
+
+#*#* vamos fazer o estilo do botao enviar, width 40 para ter 40% da pag, padding para aumentar
+'.enviar:hover' usado qd o mouse está em cima
+'cursor: pointer;' usado para qd a seta tiver em cima do botao, virar uma mão( tornar clicavel)
+
+Vamos mexer no visual da tabela= table
 
 */
 header {
@@ -157,15 +173,51 @@ form{
     margin: 40px 0;
 }
 
-form label {
+form label, form legend {
     display:block;
     font-size: 20px;
     margin: 0 0 10px;
 }
 
-form input {
+.input-padrao {
     display:block;
     margin: 0 0 20px;
     padding: 10px 25px;
     width: 50%;
+}
+
+.checkbox {
+    margin: 20px 0;
+}
+
+.enviar{
+    width:40%;
+    padding: 15px 0;
+    background: red;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.enviar:hover {
+    background: darkred;
+}
+
+table {
+    margin: 20px 0 40px;
+}
+
+thead {
+    background: black;
+    color: white;
+    font-weight: bold;
+}
+
+td , th{
+    border: 1px solid #000000;
+    padding: 5px 8px;
+
 }
