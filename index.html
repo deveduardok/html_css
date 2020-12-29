@@ -30,8 +30,34 @@ coloco  uma classe titulo centralizado em todos os hs e jogo no css que quero cn
 ===============================================================
 PARTE 2 - vamos fazer a pag de produtos, cada pag tem um html
 
+===============================================================
+Parte 4 - Refazer e aperfeiçoar a pag HOME
+Vamos retirar o link do css (style-home.css) e colocar os 2links iguais do produtos.html
+Copia todo header(cabeçalho) e footer do produtos.html e coloca aqui dentro do body.
+Colocar a tag <main> pegando as duas <div>
+A img 'banner' fica fora do main, para que ela tenha destaque e ocupe toda largura
 
+Inves de <div> coloca <section> = conteudo complexo, td para msm coisa
+Para um bloco onde o conteúdo tenha o mesmo significado, o mesmo sentido, usamos uma <section>.
 
+'<img id='banner..' o id eh mt forte, vamos trocar por uma class
+DICA: smpr que falamos de estilo usamos CLASS, qd falamos de comportamento usamos ID
+
+Vou colocar outra img>> utensilios.jpg
+
+******* VAMOS criar um MAPA na HOME, usando google maps ****
+criar uma section e uma class mapa
+# vamos no google maps, pesquisamos alura(local) > hamb > compartilhar incorp mapa > 
+>aba incorp mapa > copia link    >>>>> cola debaixo do <p> >>>> iframe src="htt.....
+    No fim do link ifframe.... modificar: '..width="100%" height="300"...'
+
+**** VAMOS COLOCAR UM VIDEO DO YOUTUBE ****
+Vai no video do youtube > compartilhar > incorporar > copia o frame..
+e cola abaixo da img beneficios
+Para centralizar o video, criamos uma <div> para envolver td iframe, div sera a mae
+div com classe video
+
+Exs de PSEUDO CLASSES= :hover, :active, :visited , :required ( sao propr)
 
 -->
 
@@ -41,6 +67,7 @@ PARTE 2 - vamos fazer a pag de produtos, cada pag tem um html
         <meta charset="UTF-8">
         <title>Barbearia</title>
         
+        <link rel="stylesheet" href="reset.css"> 
         <link rel="stylesheet" href="style.css">
 
   
@@ -48,33 +75,71 @@ PARTE 2 - vamos fazer a pag de produtos, cada pag tem um html
     
     <body>
         <header>
-            <h1 class="titulo-principal">Barbearia </h1>
-        
+            <div class='caixa'>
+                <h1><img src="logo.png"></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>    
         </header>
-        <img id='banner' src='banner.jpg'>
 
-        <div class='principal'>
-            <h2 class="titulo-centralizado" >Sobre a Barbearia</h2>
+        <img class='banner' src='banner.jpg'>
 
-            <p >Localizada no coração da cidade a <strong>Barbearia</strong> traz para o mercado o que há de melhor para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é destaque na cidade e conquista novos clientes a cada dia. </p>
+        <main>
+            <section class='principal'>
+                <h2 class="titulo-principal" >Sobre a Barbearia</h2>
 
-            <p id="missao"><em>Nossa missão é: <strong>"Proporcionar auto-estima e qualidade de vida aos clientes".</strong></em> </p>
+                <img class='utensilios' src='utensilios.jpg' alt='utensilios de um barbeiro'>
 
-            <p >Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes. </p>
-        </div>
+                <p >Localizada no coração da cidade a <strong>Barbearia</strong> traz para o mercado o que há de melhor para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é destaque na cidade e conquista novos clientes a cada dia. </p>
 
-        <div class='beneficios'>
-            <h3 class="titulo-centralizado"> Benefícios </h3>
+                <p id="missao"><em>Nossa missão é: <strong>"Proporcionar auto-estima e qualidade de vida aos clientes".</strong></em> </p>
 
-            <ul>
-                <li class="itens">Atendimento aos clientes</li>
-                <li class="itens">Espaço diferenciado </li>
-                <li class="itens">Localização</li>
-                <li class="itens">Profissionais qualificados</li>
-            </ul>
+                <p >Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes. </p>
+            </section>
 
-            <img src="beneficios.jpg" class="imagembeneficios">
-        </div>    
+            <section class='mapa'>
+                <h3 class='titulo-principal'> Nosso estabelecimento</h3>
+                <p>Nosso estabelecimento esta localizado no coração da cidade.</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.44859813096!2d-46.63465338554244!3d-23.588239368469353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xab35da2f5ca62674!2sCaelum%20-%20Escola%20de%20Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1609272994320!5m2!1spt-BR!2sbr" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+            </section>
+
+
+
+            <section class='beneficios'>
+                <h3 class="titulo-principal"> Benefícios </h3>
+
+                <ul>
+                    <li class="itens">Atendimento aos clientes</li>
+                    <li class="itens">Espaço diferenciado </li>
+                    <li class="itens">Localização</li>
+                    <li class="itens">Profissionais qualificados</li>
+                </ul>
+
+                <img src="beneficios.jpg" class="imagembeneficios">
+
+                <div class='video'>
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Q7ZvcdZLAS0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                 </div>
+            </section>    
+        </main>    
+
+        <footer>
+            <img src="logo-branco.png">
+            <p class="copyright">&copy; Copyright Barbearia - 2020</p>
+
+        </footer>
+
+        
     </body>
+
+
 
 </html>
