@@ -58,13 +58,22 @@ Para centralizar o video, criamos uma <div> para envolver td iframe, div sera a 
 div com classe video
 
 Exs de PSEUDO CLASSES= :hover, :active, :visited , :required ( sao propr)
+Vou criar uma div: class=conteudo-beneficios e na ul dar uma classe=lista-beneficios
+"</ul><img src="beneficios.jpg" class="imagem-beneficios">" => vou colocar lado a lado para um conteudo ficar lado a lado no site
 
+*Para colocarmos o primeiro item de uma lista em negrito, temos que dar uma classe pra ele, MAS agora com CSS3, podemos fazer 
+tudo pelo css sem criar classe
+
+Vamos criar uma div para o mapa, assim ele nao fica pegando a tela inteira na horizontal>>>> class= mapa-conteudo
+
+<meta name='viewport' content='width=devide-width'> => com isso adaptamos nosso site para celular
 -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
+        <meta name='viewport' content='width=devide-width'>
         <title>Barbearia</title>
         
         <link rel="stylesheet" href="reset.css"> 
@@ -105,23 +114,27 @@ Exs de PSEUDO CLASSES= :hover, :active, :visited , :required ( sao propr)
             <section class='mapa'>
                 <h3 class='titulo-principal'> Nosso estabelecimento</h3>
                 <p>Nosso estabelecimento esta localizado no coração da cidade.</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.44859813096!2d-46.63465338554244!3d-23.588239368469353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xab35da2f5ca62674!2sCaelum%20-%20Escola%20de%20Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1609272994320!5m2!1spt-BR!2sbr" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
+                <div class='mapa-conteudo'>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.44859813096!2d-46.63465338554244!3d-23.588239368469353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xab35da2f5ca62674!2sCaelum%20-%20Escola%20de%20Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1609272994320!5m2!1spt-BR!2sbr" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+                </div>    
             </section>
 
 
 
             <section class='beneficios'>
                 <h3 class="titulo-principal"> Benefícios </h3>
-
-                <ul>
-                    <li class="itens">Atendimento aos clientes</li>
-                    <li class="itens">Espaço diferenciado </li>
-                    <li class="itens">Localização</li>
-                    <li class="itens">Profissionais qualificados</li>
-                </ul>
-
-                <img src="beneficios.jpg" class="imagembeneficios">
+                <div class='conteudo-beneficios'>
+                    <ul class='lista-beneficios'>
+                        <li class="itens">Atendimento aos clientes</li>
+                        <li class="itens">Espaço diferenciado </li>
+                        <li class="itens">Localização</li>
+                        <li class="itens">Profissionais qualificados</li>
+                        <li class="itens">Pontualidade</li>
+                        <li class="itens">Limpeza</li>
+                    </ul><img src="beneficios.jpg" class="imagem-beneficios">
+                </div>
 
                 <div class='video'>
 

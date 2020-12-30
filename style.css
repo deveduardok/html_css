@@ -82,7 +82,31 @@ float= faz a img flutuar, fica na esq prox do texto
 float:left quanto o float: right, servem para que o elemento se destaque na tela, deixe de ocupar o espaço em que estava, 
 para que os outros elementos possam se posicionar ao redor dele
 
+Vou criar o css de conteudo-beneficios...
+Vamos tratar da classe .itens no css >>> line-height: 1.5 [serve para ter espaço entre as linhas]
 
+*Para colocarmos o primeiro item de uma lista em negrito, temos que dar uma classe pra ele. MAS agora 
+com css3, usamos isso>>> .itens: first-child {fonte...}
+
+### BACKGROUND COM DEGRADE ,  esta na classe .mapa da HOME
+    'background: linear-gradient(orange,blue)' >>>> assim ele faz degrade do laranja ao azul
+     background: linear-gradient(90deg,orange,blue) >> degrade na horizontal a 90 graus
+     background: linear-gradient(red 50%, orange,blue) >> degrade 50% da tela eh red
+     background: linear-gradient(45deg,orange,blue,green) >> degrade na diag 45 graus
+     background: radial-gradient(orange,blue,black) >> degrade oval
+
+Colocar uma estrela nos itens da lista de beneficios>>> entramos no site unicode star, 
+     copiar o iconde de estrela e colar no meu css
+     " .itens:before { content: '★' }  "
+
+DICA: se quero mudar tds os paragrafos que nao sao o id:missao >>>> '.principal p:not(#missao){background:red;}' 
+
+PODEMOS USAR O CALC, PARA DEIXAR O SITE MAIS RESPONSIVO, TANTO PARA DESKTOP QT MOBILE, deixa especif , como queremos. 
+Nem smpre usaremos, Mas da pra usar em momentos especif
+>>> width: calc(40% - (26px * 4));
+
+@media screen and(max-width:480px) >>> É dentro dessa media query que criamos um estilo visual que compreenda telas de até 480px. 
+Melhores praticas para criar layout responsivos >> Usar medidas proporcionais para tudo e Criar um layout fluido que se adapte sempre
 */
 header {
     background: #BBBBBB;
@@ -178,8 +202,7 @@ footer{
 }
 
 main{
-    width:940px;
-    margin: 0 auto;
+
 }
 
 form{
@@ -247,6 +270,15 @@ td , th{
     clear:left;
 
 }
+
+.principal{
+    padding 3em 0;
+    background: #FEFEFE;
+    width:940px;
+    margin: 0 auto;
+
+}
+
 .principal p{
     margin: 0 0 1em;
 }
@@ -266,13 +298,15 @@ td , th{
 
 }
 
-.imagembeneficios {
-    width: 60%;
-
-}
-
 .mapa {
     padding: 3em 0;
+    background: linear-gradient(#FEFEFE, #888888);
+}
+
+.mapa-conteudo{
+    width:940px;
+    margin: 0 auto;
+
 }
 
 .mapa p {
@@ -280,8 +314,63 @@ td , th{
     text-align: center ;
 }
 
+.beneficios {
+    padding: 3em 0;
+    background: #888888;
+
+}
+
+.conteudo-beneficios {
+    width:640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios{
+    width: 40%;
+    display:inline-block;
+    vertical-align: top;
+}
+
+.itens{
+    line-height: 1.5;
+
+}
+
+.itens:first-child {
+    font-weight:bold;
+}
+
+.itens:before {
+    content: '★'
+}
+
+.imagem-beneficios {
+    width: 60%;
+
+}
+
 .video{
     width:560px;
-    margin: 1em auto;
+    margin: 2em auto;
+
+}
+
+@media screen and(max-width:480px) {
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video{
+        width:auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+    
+    nav{
+        position:static;
+
+    }
+    .lista-beneficios, .imagem-beneficios {
+        width: 100%;
+
+    }
 
 }
