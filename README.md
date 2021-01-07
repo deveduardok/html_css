@@ -6,4 +6,6 @@
 <li>Contato</li>
 </ul>
 
+<h3>Dentro da Home teremos: mapa(googlemaps) e video(youtube)</h3>
+
 <h3>Utilizando HTML e CSS.</h3>
